@@ -1,0 +1,8 @@
+graft src/plone
+graft docs
+prune news
+include *.md
+include *.rst
+exclude *.txt
+exclude *.cfg
+global-exclude *.pyc
