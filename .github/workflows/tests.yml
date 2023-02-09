@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-cache-
       - name: Install dependencies
         run: |
-          pip install -e .[test] -r https://dist.plone.org/release/6.0-latest/requirements.txt -c https://dist.plone.org/release/6.0-latest/requirements.txt
+          pip install -e .[test] zope.testrunner -r https://dist.plone.org/release/6.0-latest/requirements.txt -c https://dist.plone.org/release/6.0-latest/requirements.txt
       - name: Test
         run: |
           python -m zope.testrunner --path=src -s plone.classicui
