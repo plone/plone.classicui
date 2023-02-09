@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        config:
+          - ["Py3.9-Plone6", "3.9"]
+          - ["Py3.10-Plone6", "3.10"]
+          - ["Py3.11-Plone6", "3.11"]
+    runs-on: ubuntu-latest
+    name: ${{ matrix.config[0] }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.config[1] }}
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/pip
+          key: ${{ runner.os }}-cache-${{ hashFiles('setup.*', '*.cfg') }}-${{ matrix.config[0] }}
+          restore-keys: |
+            ${{ runner.os }}-cache-
+      - name: Install dependencies
+        run: |
+          pip install -e .[test] zope.testrunner -r https://dist.plone.org/release/6.0-latest/requirements.txt -c https://dist.plone.org/release/6.0-latest/requirements.txt
+      - name: Test
+        run: |
+          python -m zope.testrunner --path=src -s plone.classicui
