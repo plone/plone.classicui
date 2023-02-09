@@ -1,6 +1,3 @@
-from plone import api
-from plone.app.testing import setRoles
-from plone.app.testing import TEST_USER_ID
 from plone.base.utils import get_installer
 from plone.classicui.testing import PLONE_CLASSICUI_INTEGRATION_TESTING
 
@@ -15,10 +12,7 @@ class TestSetup(unittest.TestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer["portal"]
-        if get_installer:
-            self.installer = get_installer(self.portal, self.layer["request"])
-        else:
-            self.installer = api.portal.get_tool("portal_quickinstaller")
+        self.installer = get_installer(self.portal, self.layer["request"])
 
     def test_product_installed(self):
         """Test if plone.classicui is installed."""
@@ -37,14 +31,8 @@ class TestUninstall(unittest.TestCase):
 
     def setUp(self):
         self.portal = self.layer["portal"]
-        if get_installer:
-            self.installer = get_installer(self.portal, self.layer["request"])
-        else:
-            self.installer = api.portal.get_tool("portal_quickinstaller")
-        roles_before = api.user.get_roles(TEST_USER_ID)
-        setRoles(self.portal, TEST_USER_ID, ["Manager"])
+        self.installer = get_installer(self.portal, self.layer["request"])
         self.installer.uninstall_product("plone.classicui")
-        setRoles(self.portal, TEST_USER_ID, roles_before)
 
     def test_product_uninstalled(self):
         """Test if plone.classicui is cleanly uninstalled."""
