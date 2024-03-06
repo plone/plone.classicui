@@ -27,5 +27,6 @@
       />
 
   <include package=".browser" />
+  <include package=".viewlets" />
 
 </configure>
