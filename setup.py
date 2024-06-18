@@ -48,14 +48,8 @@ setup(
     python_requires=">=3.10",
     install_requires=[
         "setuptools",
-        "Products.CMFPlone",
         "plone.distribution",
     ],
-    extras_require={
-        "test": [
-            "plone.app.testing",
-        ],
-    },
     entry_points="""
     [plone.autoinclude.plugin]
     target = plone
