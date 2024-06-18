@@ -3,5 +3,11 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     >
   <include package="plone.distribution" />
-
+  <plone:distribution
+      name="classic"
+      title="Plone Site (Classic UI)"
+      description="A Plone Site with Classic UI."
+      headless="false"
+      post_handler="plone.distribution.handler.post_handler"
+      />
 </configure>
