@@ -1,5 +1,64 @@
 # Generated from:
-# https://github.com/plone/meta/tree/master/config/default
+# https://github.com/plone/meta/tree/main/config/default
+# See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "80b6e76b"
+commit-id = "a89af8f2"
+
+[pyproject]
+extra_lines = """
+[project]
+name = "plone.classicui"
+dynamic = ["version"]
+description = "Plone Classic UI distribution."
+readme = "README.md"
+license = {text = "gpl-2.0-only"}
+requires-python = ">=3.10"
+authors = [
+    { name = "Plone Foundation", email = "releasemanager@plone.org" },
+]
+keywords = [
+    "CMS",
+    "Distribution",
+    "Plone",
+    "Python",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Plone",
+    "Framework :: Plone :: 6.1",
+    "Framework :: Plone :: Addon",
+    "Framework :: Plone :: Distribution",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "Products.CMFPlone",
+    "plone.distribution",
+]
+
+[project.optional-dependencies]
+test = [
+    "plone.app.testing",
+]
+
+[project.urls]
+Homepage = "https://github.com/plone/plone.classicui"
+Source = "https://github.com/plone/plone.classicui"
+Tracker = "https://github.com/plone/plone.classicui/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "plone.classicui.__version__"}
+
+[tool.zest-releaser]
+python-file-with-version = "src/plone/classicui/__init__.py"
+
+"""
