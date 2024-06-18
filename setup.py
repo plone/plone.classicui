@@ -12,8 +12,8 @@ long_description = "\n\n".join(
 
 setup(
     name="plone.classicui",
-    version="1.0a1",
-    description="Plone classicui.",
+    version="1.0.0a1.dev0",
+    description="Plone Classic UI distribution",
     long_description=long_description,
     long_description_content_type="text/markdown",
     # Get more from https://pypi.org/classifiers/
@@ -23,11 +23,11 @@ setup(
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: Distribution",
-        "Framework :: Plone :: 6.0",
+        "Framework :: Plone :: 6.1",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
@@ -45,10 +45,11 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.9",
+    python_requires=">=3.10",
     install_requires=[
         "setuptools",
-        "Plone",
+        "Products.CMFPlone",
+        "plone.distribution",
     ],
     extras_require={
         "test": [
@@ -56,7 +57,7 @@ setup(
         ],
     },
     entry_points="""
-    [z3c.autoinclude.plugin]
+    [plone.autoinclude.plugin]
     target = plone
     """,
 )
