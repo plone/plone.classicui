@@ -1,5 +1,5 @@
 {
-  "@id": "/classic",
+  "@id": "/",
   "@type": "Plone Site",
   "UID": "plone_site_root",
   "allow_discussion": null,
