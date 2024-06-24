@@ -49,7 +49,24 @@ setup(
     install_requires=[
         "setuptools",
         "plone.distribution",
+        "Products.CMFPlacefulWorkflow",
+        "plone.app.caching",
+        "plone.app.discussion",
+        "plone.app.iterate",
+        "plone.app.multilingual",
+        "Products.CMFPlone",
     ],
+    extras_require={
+        "test": [
+            "plone.app.testing",
+            "plone.app.upgrade",
+            "plone.testing",
+            "pytest-cov",
+            "pytest-plone>=0.5.0",
+            "zest.releaser[recommended]",
+            "zestreleaser.towncrier",
+        ]
+    },
     entry_points="""
     [plone.autoinclude.plugin]
     target = plone
