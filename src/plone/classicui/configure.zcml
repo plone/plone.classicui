@@ -1,21 +1,6 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:plone="http://namespaces.plone.org/plone"
-    >
+<configure xmlns="http://namespaces.zope.org/zope">
 
-  <include package="plone.app.caching" />
-  <include package="plone.app.discussion" />
-  <include package="Products.CMFPlacefulWorkflow" />
-  <include package="plone.app.iterate" />
-  <include package="plone.app.multilingual" />
-  <include package="plone.distribution" />
-
-  <plone:distribution
-      name="classic"
-      title="Plone Site (Classic UI)"
-      description="A Plone Site with Classic UI."
-      headless="false"
-      post_handler="plone.distribution.handler.post_handler"
-      />
+  <include file="dependencies.zcml" />
+  <include file="distribution.zcml" />
 
 </configure>

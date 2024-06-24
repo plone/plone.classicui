@@ -38,7 +38,7 @@ endif
 # Set distributions still in development
 DISTRIBUTIONS="classic"
 
-all: build
+all: install
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -55,7 +55,7 @@ clean-instance: ## remove existing instance
 
 .PHONY: clean-venv
 clean-venv: ## remove virtual environment
-	rm -fr $(BIN_FOLDER) env pyvenv.cfg .tox .pytest_cache requirements-mxdev.txt
+	rm -fr $(VENV_FOLDER) env pyvenv.cfg .tox .pytest_cache constraints-mxdev.txt requirements-mxdev.txt sources
 
 .PHONY: clean-build
 clean-build: ## remove build artifacts
@@ -85,21 +85,25 @@ $(BIN_FOLDER)/pip $(BIN_FOLDER)/tox $(BIN_FOLDER)/mxdev:
 
 .PHONY: config
 config: $(BIN_FOLDER)/pip  ## Create instance configuration
-	@echo "$(GREEN)==> Create instance configuration$(RESET)"
+	@echo "$(GREEN)==> Create instance configuration $(RESET)"
 	$(BIN_FOLDER)/pipx run cookiecutter -f --no-input --config-file instance.yaml gh:plone/cookiecutter-zope-instance
 
-.PHONY: install-plone-6
-install-plone-6: config ## pip install Plone packages
+$(BIN_FOLDER)/runwsgi: config ## pip install Plone packages
 	@echo "$(GREEN)==> Setup Build$(RESET)"
 	$(BIN_FOLDER)/mxdev -c mx.ini
 	$(BIN_FOLDER)/pip install -r requirements-mxdev.txt
 
+.PHONY: install-plone-6
+install-plone-6: $(BIN_FOLDER)/runwsgi  ## Install Plone 6
+
 .PHONY: install
-install: install-plone-6 ## Install Plone 6
+install: $(BIN_FOLDER)/runwsgi ## Install Plone 6
 
 .PHONY: start
 start: ## Start a Plone instance on localhost:8080
-	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore ./$(BIN_FOLDER)/runwsgi instance/etc/zope.ini
+	@echo "$(GREEN)==> Start Zope$(RESET)"
+	if [ -f $(BIN_FOLDER)/runwsgi ]; then DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore $(BIN_FOLDER)/runwsgi instance/etc/zope.ini; else echo "$(RED) Please run make install first$(RESET)";fi
+
 
 .PHONY: check
 check: $(BIN_FOLDER)/tox ## Format the codebase according to our standards

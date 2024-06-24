@@ -3,7 +3,7 @@
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "721299ce"
+commit-id = "4b86f8f1"
 
 [tox]
 test_runner = "pytest"
@@ -12,4 +12,7 @@ use_mxdev = true
 test_deps_additional = ""
 
 [pyproject]
-dependencies_ignores = "['Products.CMFPlone', 'pytest-cov', 'zest.releaser', 'zestreleaser.towncrier']"
+dependencies_ignores = "['plone.base', 'Products.CMFPlone', 'pytest-cov', 'zest.releaser', 'zestreleaser.towncrier']"
+dependencies_mappings = [
+    "pytest-plone=['pytest','pytest_plone','zope.pytestlayer','plone.testing','plone.app.testing']",
+    ]
