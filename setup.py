@@ -57,7 +57,6 @@ setup(
         "plone.app.iterate",
         "plone.app.multilingual",
         "plone.base",
-        "Products.CMFPlone",
         "Zope",
     ],
     extras_require={
