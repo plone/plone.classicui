@@ -1,7 +1,7 @@
 ---
 name: "\U0001F680 PLIP"
 about: Plone Improvement Proposal
-title: ''
+title: 'PLIP: '
 labels: '03 type: feature (plip)'
 assignees: ''
 projects: 'plone/50'
