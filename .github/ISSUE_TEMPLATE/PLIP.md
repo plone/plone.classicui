@@ -10,6 +10,13 @@ projects: 'plone/50'
 
 ## PLIP (Plone Improvement Proposal)
 
+<!--
+
+Read https://6.docs.plone.org/contributing/core/plips.html first!
+
+Mention the @plone/ClassicUI-Team when the PLIP is information complete!
+
+-->
 
 ## Responsible Persons
 
