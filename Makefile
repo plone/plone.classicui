@@ -128,3 +128,4 @@ test: $(BIN_FOLDER)/tox ## run tests
 .PHONY: test-coverage
 test-coverage: $(BIN_FOLDER)/tox ## run tests with coverage
 	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) $(BIN_FOLDER)/tox -e coverage
+
