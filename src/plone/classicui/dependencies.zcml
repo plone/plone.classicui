@@ -4,8 +4,5 @@
   <include package="plone.distribution" />
   <include package="plone.app.caching" />
   <include package="plone.app.discussion" />
-  <include package="Products.CMFPlacefulWorkflow" />
-  <include package="plone.app.iterate" />
-  <include package="plone.app.multilingual" />
 
 </configure>

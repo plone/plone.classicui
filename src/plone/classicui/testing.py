@@ -7,10 +7,6 @@ from plone.testing.zope import WSGI_SERVER_FIXTURE
 # Required to
 import plone.app.caching  # noQA
 import plone.app.discussion  # noQA
-import plone.app.iterate  # noQA
-import plone.app.multilingual  # noQA
-import plone.app.upgrade  # noQA
-import Products.CMFPlacefulWorkflow  # noQA
 
 
 ANSWERS = {
@@ -30,10 +26,6 @@ class BaseFixture(PloneDistributionFixture):
     _distribution_products = (
         ("plone.app.contenttypes", {"loadZCML": True}),
         ("plone.app.caching", {"loadZCML": True}),
-        ("plone.app.iterate", {"loadZCML": True}),
-        ("plone.app.multilingual", {"loadZCML": True}),
-        ("plone.app.upgrade", {"loadZCML": True}),
-        ("Products.CMFPlacefulWorkflow", {"loadZCML": True}),
         ("plone.distribution", {"loadZCML": True}),
     )
 

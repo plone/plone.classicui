@@ -51,18 +51,14 @@ setup(
     install_requires=[
         "setuptools",
         "plone.distribution",
-        "Products.CMFPlacefulWorkflow",
         "plone.app.caching",
         "plone.app.discussion",
-        "plone.app.iterate",
-        "plone.app.multilingual",
         "plone.base",
         "Zope",
     ],
     extras_require={
         "test": [
             "plone.app.testing",
-            "plone.app.upgrade",
             "plone.testing",
             "pytest-cov",
             "pytest-plone>=0.5.0",
