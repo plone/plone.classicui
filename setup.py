@@ -52,7 +52,6 @@ setup(
         "setuptools",
         "plone.distribution",
         "plone.app.caching",
-        "plone.app.discussion",
         "plone.base",
         "Zope",
     ],

@@ -3,6 +3,5 @@
   <include package="Products.CMFPlone" />
   <include package="plone.distribution" />
   <include package="plone.app.caching" />
-  <include package="plone.app.discussion" />
 
 </configure>

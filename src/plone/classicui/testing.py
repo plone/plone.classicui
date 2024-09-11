@@ -6,7 +6,6 @@ from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 # Required to
 import plone.app.caching  # noQA
-import plone.app.discussion  # noQA
 
 
 ANSWERS = {
