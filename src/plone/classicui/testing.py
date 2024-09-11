@@ -4,9 +4,6 @@ from plone.app.testing import PloneSandboxLayer
 from plone.distribution.testing.layer import PloneDistributionFixture
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
-# Required to
-import plone.app.caching  # noQA
-
 
 ANSWERS = {
     "site_id": "plone",
@@ -24,7 +21,6 @@ class BaseFixture(PloneDistributionFixture):
     SITES = (("classic", ANSWERS),)
     _distribution_products = (
         ("plone.app.contenttypes", {"loadZCML": True}),
-        ("plone.app.caching", {"loadZCML": True}),
         ("plone.distribution", {"loadZCML": True}),
     )
 

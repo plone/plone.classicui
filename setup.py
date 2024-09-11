@@ -51,7 +51,6 @@ setup(
     install_requires=[
         "setuptools",
         "plone.distribution",
-        "plone.app.caching",
         "plone.base",
         "Zope",
     ],
