@@ -2,7 +2,7 @@
   "@id": "/Members",
   "@type": "Folder",
   "UID": "54163be595184b4eb0a0b82a58b8def8",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "contributors": [],
   "created": "2023-05-18T18:07:36+00:00",
   "creators": [

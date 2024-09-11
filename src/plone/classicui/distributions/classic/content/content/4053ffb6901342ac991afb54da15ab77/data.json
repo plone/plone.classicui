@@ -2,7 +2,7 @@
   "@id": "/news",
   "@type": "Folder",
   "UID": "4053ffb6901342ac991afb54da15ab77",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "contributors": [],
   "created": "2023-05-18T18:07:36+00:00",
   "creators": [

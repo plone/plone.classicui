@@ -2,7 +2,7 @@
   "@id": "/events/aggregator",
   "@type": "Collection",
   "UID": "61f6d382910945ea95f2e78a14ebb170",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "contributors": [],
   "created": "2023-05-18T18:07:36+00:00",
   "creators": [
