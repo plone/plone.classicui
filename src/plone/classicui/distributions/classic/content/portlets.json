@@ -1,6 +1,6 @@
 [
   {
-    "@id": "http://nohost/classic/Members",
+    "@id": "http://nohost/Plone/Members",
     "UID": "54163be595184b4eb0a0b82a58b8def8",
     "blacklist_status": [
       {
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "@id": "http://nohost/classic",
+    "@id": "http://nohost/Plone",
     "UID": "plone_site_root",
     "portlets": {
       "plone.footerportlets": [

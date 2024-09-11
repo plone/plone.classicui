@@ -1,5 +1,5 @@
 {
-  "@id": "/",
+  "@id": "/Plone",
   "@type": "Plone Site",
   "UID": "plone_site_root",
   "allow_discussion": null,
@@ -13,7 +13,7 @@
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.versions": {},
-  "id": "classic",
+  "id": "Plone",
   "is_folderish": true,
   "items_total": 2,
   "language": "##DEFAULT##",
