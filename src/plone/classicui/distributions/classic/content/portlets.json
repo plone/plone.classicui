@@ -2,7 +2,7 @@
   {
     "@id": "http://nohost/Plone/Members",
     "UID": "54163be595184b4eb0a0b82a58b8def8",
-    "blacklist_status": [
+    "blocked_status": [
       {
         "category": "group",
         "manager": "plone.rightcolumn",
