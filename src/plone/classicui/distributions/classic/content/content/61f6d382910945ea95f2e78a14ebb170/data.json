@@ -2,36 +2,23 @@
   "@id": "/events/aggregator",
   "@type": "Collection",
   "UID": "61f6d382910945ea95f2e78a14ebb170",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "contributors": [],
   "created": "2023-05-18T18:07:36+00:00",
   "creators": [
     "admin"
   ],
   "customViewFields": [
-    {
-      "title": "Title",
-      "token": "Title"
-    },
-    {
-      "title": "Creator",
-      "token": "Creator"
-    },
-    {
-      "title": "Type",
-      "token": "Type"
-    },
-    {
-      "title": "Last modified",
-      "token": "ModificationDate"
-    }
+    "Title",
+    "Creator",
+    "Type",
+    "ModificationDate"
   ],
   "description": "Site Events",
   "effective": null,
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
-  "exportimport.conversation": [],
   "exportimport.versions": {},
   "id": "aggregator",
   "is_folderish": false,
@@ -50,8 +37,6 @@
     "@type": "Folder",
     "UID": "ab584c1a6fae465da2283a0962f80114",
     "description": "Site Events",
-    "image_field": null,
-    "image_scales": null,
     "review_state": "published",
     "title": "Events",
     "type_title": "Folder"
@@ -98,7 +83,5 @@
         "time": "2023-05-18T18:07:36+00:00"
       }
     ]
-  },
-  "working_copy": null,
-  "working_copy_of": null
+  }
 }

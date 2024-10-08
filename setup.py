@@ -20,16 +20,18 @@ setup(
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Framework :: Plone :: Addon",
-        "Framework :: Plone :: Distribution",
         "Framework :: Plone :: 6.1",
-        "Programming Language :: Python",
+        "Framework :: Plone :: 6.1",
+        "Framework :: Plone :: Distribution",
+        "Framework :: Plone",
+        "Framework :: Zope :: 5",
+        "Framework :: Zope",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
-        "Operating System :: OS Independent",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Programming Language :: Python",
     ],
     keywords="Python Plone CMS Distribution",
     author="Plone Foundation",
@@ -49,7 +51,19 @@ setup(
     install_requires=[
         "setuptools",
         "plone.distribution",
+        "plone.base",
+        "Zope",
     ],
+    extras_require={
+        "test": [
+            "plone.app.testing",
+            "plone.testing",
+            "pytest-cov",
+            "pytest-plone>=0.5.0",
+            "zest.releaser[recommended]",
+            "zestreleaser.towncrier",
+        ]
+    },
     entry_points="""
     [plone.autoinclude.plugin]
     target = plone

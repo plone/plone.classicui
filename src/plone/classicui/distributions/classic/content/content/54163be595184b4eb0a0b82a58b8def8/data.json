@@ -2,7 +2,7 @@
   "@id": "/Members",
   "@type": "Folder",
   "UID": "54163be595184b4eb0a0b82a58b8def8",
-  "allow_discussion": false,
+  "allow_discussion": null,
   "contributors": [],
   "created": "2023-05-18T18:07:36+00:00",
   "creators": [
@@ -13,7 +13,6 @@
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
-  "exportimport.conversation": [],
   "exportimport.versions": {},
   "id": "Members",
   "is_folderish": true,
@@ -26,8 +25,8 @@
     "@id": "/",
     "@type": "Plone Site",
     "UID": "plone_site_root",
-    "description": "A Plone Site",
-    "title": "Site",
+    "description": "A Plone Site with Classic UI",
+    "title": "Plone Site",
     "type_title": "Plone Site"
   },
   "review_state": "private",
@@ -46,7 +45,5 @@
         "time": "2023-05-18T18:07:36+00:00"
       }
     ]
-  },
-  "working_copy": null,
-  "working_copy_of": null
+  }
 }
