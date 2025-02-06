@@ -1,3 +1,10 @@
+## 1.0.0 (2025-02-06)
+
+
+### Internal:
+
+- Make final release, no changes.  [maurits] #610
+
 ## 1.0.0a1 (2024-10-31)
 
 
