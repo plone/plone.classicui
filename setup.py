@@ -21,7 +21,7 @@ setup(
         "Development Status :: 2 - Pre-Alpha",
         "Environment :: Web Environment",
         "Framework :: Plone :: 6.1",
-        "Framework :: Plone :: 6.1",
+        "Framework :: Plone :: 6.2",
         "Framework :: Plone :: Distribution",
         "Framework :: Plone",
         "Framework :: Zope :: 5",
