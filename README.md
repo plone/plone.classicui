@@ -1,7 +1,8 @@
 # plone.classicui
 
-The `plone.classicui` package provides all the templates and the code which is
-necessary to render the classic Plone user interface.
+`plone.classicui` is a distribution for Plone 6.1 or later which comes with a basic Classic UI set of functionality.
+This is similar to what you had when you installed the Plone package in Plone 6.0 and created a Classic UI Plone site.
 
-The package contains page templates that were previously part of following packages,
-like `plone.app.layout` and `plone.app.portlets`.
+The package does not contain page templates,
+it only contains dependencies to other add-ons and configures Plone.
+It can be used as an example for your own Classic UI based Plone distribution.
