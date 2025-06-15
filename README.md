@@ -1,7 +1,8 @@
 # plone.classicui
 
-`plone.classicui` is a Plone distribution which comes with a basic classic ui set of functionallity, similar to what you have when you installed the Plone package and created a classxi ui Plone site.
+`plone.classicui` is a distribution for Plone 6.1 or later which comes with a basic Classic UI set of functionality.
+This is similar to what you had when you installed the Plone package in Plone 6.0 and created a Classic UI Plone site.
 
 The package does not contain page templates,
-it only contains dependencies to other addon's and configures Plone.
-It can be used as an example for your own classic ui based Plone distribution.
+it only contains dependencies to other add-ons and configures Plone.
+It can be used as an example for your own Classic UI based Plone distribution.
