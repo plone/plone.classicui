@@ -1,3 +1,10 @@
+## 1.0.1 (2025-06-19)
+
+
+### Documentation:
+
+- Fixed description in the README.  [MrTango] #20
+
 ## 1.0.0 (2025-02-06)
 
 
