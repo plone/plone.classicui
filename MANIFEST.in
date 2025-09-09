@@ -1,5 +1,6 @@
 graft src/plone
 graft tests
+
 prune news
 include *.yaml
 include Makefile
