@@ -1,6 +1,6 @@
 ---
 name: "\U0001F680 PLIP"
-about: 'A Plone Improvement Proposal (PLIP) is a change to a Plone package that would affect everyone who uses that package.'
+about: 'A Plone Improvement Proposal (PLIP) is a larger change to Plone, usually affecting multiple packages, and which goes through a formal process. See [Plone Improvement Proposals (PLIPs)](https://6.docs.plone.org/contributing/core/plips.html) for details.'
 title: 'PLIP: '
 labels: '03 type: feature (plip)'
 assignees: ''
