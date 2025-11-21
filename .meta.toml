@@ -1,18 +1,16 @@
 # Generated from:
-# https://github.com/plone/meta/tree/main/config/default
+# https://github.com/plone/meta/tree/main/src/plone/meta/default
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "4b86f8f1"
+commit-id = "2.2.2"
 
 [tox]
 test_runner = "pytest"
 test_path = "/tests"
 use_mxdev = true
 test_deps_additional = ""
+test_matrix = {"6.2" = ["*"]}
 
 [pyproject]
 dependencies_ignores = "['plone.base', 'Products.CMFPlone', 'pytest-cov', 'zest.releaser', 'zestreleaser.towncrier']"
-dependencies_mappings = [
-    "pytest-plone=['pytest','pytest_plone','zope.pytestlayer','plone.testing','plone.app.testing']",
-    ]
