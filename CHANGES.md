@@ -1,3 +1,16 @@
+## 2.0.0a1 (2025-11-26)
+
+
+### Breaking changes:
+
+- Replace ``pkg_resources`` namespace with PEP 420 native namespace.
+  Support only Plone 6.2 and Python 3.10+. #3928
+
+
+### Internal:
+
+- Expand `about` section and use the correct project board number in the PLIP issue template. @stevepiercy #22
+
 ## 1.0.1 (2025-06-19)
 
 
