@@ -29,6 +29,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Programming Language :: Python",
     ],
     keywords="Python Plone CMS Distribution",
@@ -46,6 +47,7 @@ setup(
     install_requires=[
         "plone.distribution",
         "plone.base",
+        "plone.app.layout",
         "Zope",
     ],
     extras_require={
