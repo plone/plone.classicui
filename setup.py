@@ -11,7 +11,7 @@ long_description = "\n\n".join(
 
 setup(
     name="plone.classicui",
-    version="2.0.0a2",
+    version="2.0.0a3.dev0",
     description="Plone Classic UI distribution",
     long_description=long_description,
     long_description_content_type="text/markdown",
