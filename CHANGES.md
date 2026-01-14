@@ -1,3 +1,10 @@
+## 2.0.0a2 (2026-01-14)
+
+
+### New features:
+
+- Install the `plone.app.layout` default profile when creating a site using the classic distribution.  @mauritsvanrees 
+
 ## 2.0.0a1 (2025-11-26)
 
 
