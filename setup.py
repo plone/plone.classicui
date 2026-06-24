@@ -54,6 +54,7 @@ setup(
         "test": [
             "plone.app.testing",
             "plone.testing",
+            "plone.api",
             "pytest-cov",
             "pytest-plone>=0.5.0",
             "zest.releaser[recommended]",
