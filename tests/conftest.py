@@ -4,7 +4,6 @@ from pytest_plone import fixtures_factory
 
 import pytest
 
-
 pytest_plugins = ["pytest_plone"]
 
 
