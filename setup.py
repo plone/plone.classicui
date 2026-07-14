@@ -1,6 +1,5 @@
 from setuptools import setup
 
-
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -30,6 +29,7 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Programming Language :: Python",
     ],
     keywords="Python Plone CMS Distribution",
@@ -54,6 +54,7 @@ setup(
         "test": [
             "plone.app.testing",
             "plone.testing",
+            "plone.api",
             "pytest-cov",
             "pytest-plone>=0.5.0",
             "zest.releaser[recommended]",
