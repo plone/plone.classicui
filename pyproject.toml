@@ -4,7 +4,70 @@
 [build-system]
 requires = ["setuptools>=68.2,<83", "wheel"]
 
+# START-MARKER-MANUAL-CONFIG
+# Anything from here until END-MARKER-MANUAL-CONFIG
+# will be kept by plone.meta
 
+[project]
+name = "plone.classicui"
+version = "2.0.1.dev0"
+description = "Plone Classic UI distribution"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Plone",
+    "Framework :: Plone :: 6.2",
+    "Framework :: Plone :: Distribution",
+    "Framework :: Zope",
+    "Framework :: Zope :: 5",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+license = "GPL-2.0-only"
+dynamic = ["readme"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Plone Foundation",email = "releasemanager@plone.org"},
+]
+maintainers = [
+    {name = "Plone Foundation and contributors",email = "plone-developers@lists.sourceforge.net"},
+]
+dependencies = [
+    "Zope",
+    "plone.app.layout",
+    "plone.base",
+    "plone.distribution",
+]
+keywords = ["Python", "Plone", "CMS", "Distribution"]
+
+[project.entry-points."plone.autoinclude.plugin"]
+target = "plone"
+
+[project.optional-dependencies]
+test = [
+    "plone.api",
+    "plone.app.testing",
+    "plone.testing",
+    "pytest-cov",
+    "pytest-plone>=0.5.0",
+    "zest.releaser[recommended]",
+    "zestreleaser.towncrier",
+]
+
+[project.urls]
+Source = "https://github.com/plone/plone.classicui"
+Tracker = "https://github.com/plone/plone.classicui/issues"
+Issues = "https://github.com/plone/Products.CMFPlone/issues"
+Changelog = "https://github.com/plone/plone.classicui/blob/main/CHANGES.md"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md", "CHANGES.md"], content-type = "text/markdown"}
+# END-MARKER-MANUAL-CONFIG
 
 [tool.towncrier]
 directory = "news/"
